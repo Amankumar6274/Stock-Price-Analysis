@@ -1,48 +1,89 @@
-# Time Series Analysis of Stock Prices with Correlation
+# Stock Price Analysis and Correlation Study
 
 ## Overview
 
-This project involves analyzing the stock prices of Apple (AAPL), Microsoft (MSFT), Google (GOOGL), and Amazon (AMZN) over the past 5 years using Python. In addition to exploring individual stock trends, the project also investigates the correlation between the closing and opening prices of these stocks.
+This project aims to analyze the stock prices of major tech companies, including Amazon, Apple, Google, and Microsoft, over the past few years. The analysis includes examining changes in stock prices over time, exploring correlations between different stocks, and investigating relationships between daily changes in closing prices and stock returns.
 
-## Data Sources
+## Analysis Tasks
 
-The stock price data for AAPL, MSFT, GOOGL, and AMZN was sourced from [insert data source]. The dataset includes daily closing and opening prices for the past 5 years.
+### 1. Analyzing Change in Stock Prices Over Time
 
-## Tools and Libraries Used
+- Converting the data type of the "date" feature into datetime.
+- Considering different rolling windows (e.g., 10 days, 20 days, 30 days).
+
+### 2. Analyzing Closing Price Change in Apple Stock
+
+#### Daily Stock Return Formula
+
+To calculate daily gain or loss for a stock:
+\[ \text{Daily Gain or Loss} = (\text{Closing Price} - \text{Opening Price}) \times \text{Number of Shares} \]
+
+Using `pct_change()`:
+- Calculate the percentage change between the current and prior closing prices.
+- Resample the data on various time bases: yearly ('Y'), quarterly ('Q'), monthly ('M'), weekly ('W'), daily ('D'), minutes ('3T'), etc.
+
+### 3. Correlation Analysis of Stock Prices
+
+- Perform correlation analysis on closing prices of Amazon, Apple, Google, and Microsoft.
+- Plot correlation matrices to identify significant relationships between stock prices.
+- Conclusions: Google and Microsoft closing prices are well correlated, while Amazon and Microsoft have a correlation of 0.96.
+
+### 4. Analyzing Daily Changes in Closing Prices and Daily Returns
+
+- Use Pairgrid for in-depth analysis:
+  - Plot histograms on the diagonal.
+  - Plot scatterplots or KDE plots for other combinations.
+- Conclusion: There's a linear relationship between AAPL and AMZN daily changes in closing prices, up to some extent.
+
+## Tools Used
 
 - Python 3
 - Pandas
 - Matplotlib
-- NumPy
-- Jupyter Notebook
-
-## Analysis
-
-The project aims to achieve the following:
-
-- Explore individual stock trends over the past 5 years.
-- Investigate the correlation between the closing and opening prices of AAPL, MSFT, GOOGL, and AMZN.
-- Visualize the correlation matrices to identify any significant relationships between the stocks.
-
+- Seaborn
 ## Results
 
-The project will provide insights into:
+### Results of Stock Price Analysis:
 
-- Correlation coefficients between closing and opening prices for each stock pair.
-- Strength and direction of correlations, aiding in portfolio diversification strategies.
-- Potential patterns or anomalies in the correlation matrices.
+1. **Change in Stock Prices Over Time:**
+   - After analyzing the stock prices over different rolling windows (e.g., 10 days, 20 days, 30 days), we observed fluctuations and trends in the prices of Amazon, Apple, Google, and Microsoft.
+
+2. **Closing Price Change in Apple Stock:**
+   - Analyzing the closing price change in Apple stock revealed [specific insights or patterns, if any].
+
+3. **Correlation Analysis of Stock Prices:**
+   - The correlation analysis showed strong correlations between the closing prices of Google and Microsoft, while Amazon and Microsoft exhibited a correlation coefficient of 0.96, indicating [interpretation of the correlation].
+
+4. **Daily Changes in Closing Prices and Daily Returns:**
+   - Using Pairgrid analysis, we observed [specific relationships or patterns] between daily changes in closing prices and daily returns of the stocks.
+
+### Key Conclusions:
+
+- [Summarize the main findings or insights obtained from the analysis].
 
 ## Future Work
 
-Future enhancements and areas for exploration include:
+### Potential Future Enhancements:
 
-- Incorporating additional features such as trading volume or news sentiment.
-- Implementing more advanced statistical methods for correlation analysis.
-- Building predictive models using correlated stock prices for forecasting.
+1. **Incorporating Additional Features:**
+   - Explore incorporating additional features such as trading volume or news sentiment to enhance the analysis and gain deeper insights into stock behavior.
 
-## Contributors
+2. **Advanced Statistical Methods:**
+   - Implement more advanced statistical methods for correlation analysis to uncover hidden relationships and dependencies between stocks.
 
-- Aman Kumar
+3. **Predictive Modeling:**
+   - Develop predictive models using the correlated stock prices for forecasting future price movements, enabling better decision-making in trading and investment strategies.
+
+4. **Visualization Techniques:**
+   - Explore advanced visualization techniques to visualize higher-dimensional patterns and relationships in the data beyond 2D and 3D plots.
+
+5. **Expansion to Other Markets:**
+   - Extend the analysis to include stocks from other markets or sectors to provide a broader perspective on market trends and correlations.
+
+### Future Research Directions:
+
+- [Identify specific research questions or areas of exploration that could be pursued in future analyses].
+- [Discuss potential collaborations or partnerships to further enhance the research].
 
 
 
